@@ -15,6 +15,8 @@
     <None Remove="WindowsAzure.Storage" />
     <None Remove="WindowsAzure.StorageExtensions" />
     <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Migrations\SqlDb\" />
+    <None Remove="Migrations\IdentityDb\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig" />
@@ -41,5 +43,7 @@
   <ItemGroup>
     <Folder Include="MODEL\" />
     <Folder Include="bin\" />
+    <Folder Include="Migrations\SqlDb\" />
+    <Folder Include="Migrations\IdentityDb\" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
-﻿@page "/MemeGallery"
-@model MemeGallery.Pages.MemeAdmin.MemeGalleryModel
+﻿@page "/MemeGalleryView"
+@model MemeGallery.Pages.MemeAdmin.MemeGalleryViewModel
 
 <head>
     <style>
@@ -30,6 +30,14 @@
             text-align: center;
         }
     </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootswatch_cyborg.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="MemeGallery.styles.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 
 <div class="container">

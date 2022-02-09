@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandemicMeme", "..\PandemicMeme\PandemicMeme\PandemicMeme.csproj", "{3BD3250B-2B05-4776-A7B6-EF2E4202C76F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{0309AA30-1248-42BD-A579-6B5E28D05FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0309AA30-1248-42BD-A579-6B5E28D05FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0309AA30-1248-42BD-A579-6B5E28D05FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD3250B-2B05-4776-A7B6-EF2E4202C76F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD3250B-2B05-4776-A7B6-EF2E4202C76F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD3250B-2B05-4776-A7B6-EF2E4202C76F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD3250B-2B05-4776-A7B6-EF2E4202C76F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

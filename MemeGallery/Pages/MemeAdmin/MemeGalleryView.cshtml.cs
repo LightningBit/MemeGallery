@@ -10,11 +10,11 @@ using MemeGallery.Model;
 
 namespace MemeGallery.Pages.MemeAdmin
 {
-    public class MemeGalleryModel : PageModel
+    public class MemeGalleryViewModel : PageModel
     {
         private ApplicationDbContext _context;
         public List<Meme> Meme { get; set; }
-        public MemeGalleryModel(ApplicationDbContext context)
+        public MemeGalleryViewModel(ApplicationDbContext context)
         {
             _context = context;
         }

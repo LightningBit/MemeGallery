@@ -1,0 +1,87 @@
+﻿@page
+@model MemeGallery.Pages.MemeAdmin.MemeUploadModel
+
+<header>
+    <style>
+        .container {
+            border: 6px solid;
+            border-radius: 10px;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            color: dark;
+        }
+
+    </style>
+</header>
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method="post" enctype="multipart/form-data">
+                <h4>Upload Meme</h4>
+                <div class="form-group">
+                    <div>
+                        <label class="control-label" for="file">Select File</label>
+                        <input type="file" id="file" name="selectFile" class="" accept="image/gif, image/jpeg, image/png" onchange="DisplayFilesToUpload()" />
+                    </div>
+                </div>
+                <p>
+                    <img src="" id="profile-img-tag" width="400" />
+                </p>
+
+                <div asp-validation-summary="All"></div>
+
+
+                <div class="mb-3">
+                    <label asp-for="Meme.Caption"></label>
+                    <input asp-for="@Model.Meme.Caption" class="form-control" />
+                    <span asp-validation-for="Meme.Caption" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Meme.Category"></label>
+                    <select asp-for="@Model.Meme.Category" class="form-control">
+                        <option value="Humor..............">Humor</option>
+                        <option value="People">People</option>
+                        <option value="Places">Places</option>
+                        <option value="Politics">Politics</option>
+                    </select>
+                    <span asp-validation-for="Meme.Category" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Meme.Rank"></label>
+                    <input asp-for="@Model.Meme.Rank" class="form-control" />
+                    <span asp-validation-for="Meme.Rank" class="text-danger"></span>
+                </div>
+                <div class="button mb-3">
+                    <a asp-page="Index" class="btn btn-secondary" style="width: 200px;">
+                        Back to list
+                    </a>
+                </div>
+                <div class="form-group">
+                    <p id="FilesToUpload"></p>
+                </div>
+                <p id="FilesToUpload"></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$('#profile-img-tag').attr('src', e.target.result);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+function DisplayFilesToUpload() {
+var element = document.getElementById("file");
+var html = "";
+@*html = "<h4>Upload Me!</h4>";*@
+html += "<input type='submit' class='upload' value='Upload meme'/>";
+document.getElementById("FilesToUpload").innerHTML = html;
+readURL(element);
+}</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>

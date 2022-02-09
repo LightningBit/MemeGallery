@@ -1,0 +1,99 @@
+﻿@page
+@model MemeGallery.Pages.MemeAdmin.MemeGalleryModel
+
+<head>
+    <style>
+        p {
+            color: darkgrey;
+            text-transform: uppercase;
+            text-align:center;
+        }
+        .block {
+            display: block;
+            width: 100%;
+            border: hidden;
+            @*background-color: ;*@
+            color: darkgrey;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .blockdown {
+            width: 100%;
+            border: hidden;
+            background-color: dark;
+            color: darkgrey;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        @*COMMENT: This is where we can check when the page loads if there is any data in ViewData["SuccessMessage"]
+            If there is, show the message in bootstraps alert box*@
+        @if (ViewData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>@ViewData["SuccessMessage"]</strong>
+            </div>
+        }
+    </div>
+  </div>
+  <div class="row">
+    @if (Model.Meme.Count > 0)
+    {
+        foreach (var image in Model.Meme)
+        {
+      <div class="col-md-3">
+          <div class="card border-secondary bg-dark" style="width:stretch">
+              <a href="@image.BlobURL" class="card">
+                  <img src="@image.BlobURL" alt="..." class="card">
+              </a>
+          </div>
+          <div class="card-footer border-secondary bg-dark mb-4">
+             
+              @if (image.Caption != null)
+              {
+                  <div class="dropdown">
+                      <button class="block btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                          Meme Stats
+                      </button>
+                      <ul class="blockdown dropdown-menu dropdown-menu-dark">
+                          <li>
+                              <a class="dropdown-item text-wrap">
+                                  <p>Description:  @image.Caption</p>
+                              </a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item">
+                                  <p>Category:  @image.Category</p>
+                              </a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item">
+                                  <p>Ranking(1-5):  @image.Rank</p>
+                              </a>
+                          </li>
+                          @*<li><a class="dropdown-item" href="https://www.pandemicmeme.com/">Visit the Blog</a></li>*@
+                      </ul>
+                  </div>
+              }
+          </div>
+      </div>
+        }
+    }
+    else
+    {
+        <h1>No Images to display!</h1>
+    }
+  </div>
+</div>

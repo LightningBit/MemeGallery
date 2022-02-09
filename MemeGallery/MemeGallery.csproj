@@ -17,6 +17,7 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Migrations\SqlDb\" />
     <None Remove="Migrations\IdentityDb\" />
+    <None Remove="Pages\MemeAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig" />
@@ -45,5 +46,6 @@
     <Folder Include="bin\" />
     <Folder Include="Migrations\SqlDb\" />
     <Folder Include="Migrations\IdentityDb\" />
+    <Folder Include="Pages\MemeAdmin\" />
   </ItemGroup>
 </Project>

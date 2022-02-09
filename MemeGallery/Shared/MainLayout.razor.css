@@ -9,12 +9,11 @@ main {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    
+    background-image: linear-gradient(170deg, rgba(0, 0, 0, 0.85) 25%, rgba(57, 65, 65, 0.95) 90%);
 }
 
 .top-row {
-    background-image: linear-gradient(#303030);
+    background: rgba(0, 0, 0, 0.85);
     border-bottom: 1px solid black;
     justify-content: flex-end;
     height: 3.5rem;

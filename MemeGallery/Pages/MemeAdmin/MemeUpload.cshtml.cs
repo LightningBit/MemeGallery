@@ -82,7 +82,7 @@ namespace MemeGallery.Pages.MemeAdmin
                 TempData["SuccessMessage"] = "Meme upload success!";
 
 
-                return RedirectToPage("/MemeAdmin/MemeGallery");
+                return RedirectToPage("/MemeAdmin/MemeGalleryView");
             }
 
                 //catch (Exception ex)

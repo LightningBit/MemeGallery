@@ -1,6 +1,11 @@
 ﻿@page "/Edit"
 @model MemeGallery.Pages.MemeAdmin.EditModel
 
+@*<head>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/css/bootswatch_cyborg.css" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>*@
 <form method="post">
     <input hidden asp-for="Meme.Id" />
     <div class="border p-3 mt-4">
@@ -43,5 +48,5 @@
     @{
         <partial name="_ValidationScriptsPartial" />
     }
- }
+}
 

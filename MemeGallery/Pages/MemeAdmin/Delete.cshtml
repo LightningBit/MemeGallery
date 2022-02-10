@@ -1,6 +1,11 @@
 ﻿@page "/Delete"
 @model MemeGallery.Pages.MemeAdmin.DeleteModel
 
+@*<head>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/css/bootswatch_cyborg.css" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>*@
 <form method="post">
     <input hidden asp-for="Meme.Id" />
     <div class="border p-3 mt-4">
@@ -19,7 +24,7 @@
         <button type="submit" class="btn btn-danger" style="width:150px;">Delete</button>
         <a asp-page="Index" class="btn btn-secondary" style="width:150px;">Back to list</a>
         @*<a asp-page="../Index" class="btn btn-secondary" style="width:150px;">Back to list</a>
-        redirect back to home page*@
+            redirect back to home page*@
 
 
 
@@ -32,5 +37,5 @@
     @{
         <partial name="_ValidationScriptsPartial" />
     }
- }
+}
 

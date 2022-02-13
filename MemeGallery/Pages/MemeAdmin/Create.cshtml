@@ -1,0 +1,49 @@
+﻿@page "/Create"
+@model MemeGallery.Pages.MemeAdmin.CreateModel
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class=" text-primary pl-3">Create Meme</h2>
+            <hr />
+        </div>
+        \
+        <div asp-validation-summary="All"></div>
+
+        <div class="mb-3">
+            <label asp-for="Meme.Category"></label>
+            <input asp-for="@Model.Meme.Category" class="form-control" />
+            <span asp-validation-for="Meme.Category" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Meme.Rank"></label>
+            <input asp-for="@Model.Meme.Rank" class="form-control" />
+            <span asp-validation-for="Meme.Rank" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Meme.Caption"></label>
+            <input asp-for="@Model.Meme.Caption" class="form-control" />
+            <span asp-validation-for="Meme.Caption" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Meme.BlobURL"></label>
+            <input asp-for="@Model.Meme.BlobURL" class="form-control" />
+            <span asp-validation-for="Meme.BlobURL" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
+        <a asp-page="Index" class="btn btn-secondary" style="width:150px;">Back to list</a>
+
+    </div>
+</form>
+
+@*Custom validation on client side*@
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

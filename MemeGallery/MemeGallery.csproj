@@ -18,7 +18,6 @@
     <None Remove="Migrations\SqlDb\" />
     <None Remove="Migrations\IdentityDb\" />
     <None Remove="Pages\MemeAdmin\" />
-    <None Remove="Migrations\IdentityDb\ApplicationDbContextIMigrations\" />
     <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +48,5 @@
     <Folder Include="Migrations\SqlDb\" />
     <Folder Include="Migrations\IdentityDb\" />
     <Folder Include="Pages\MemeAdmin\" />
-    <Folder Include="Migrations\IdentityDb\ApplicationDbContextIMigrations\" />
   </ItemGroup>
 </Project>

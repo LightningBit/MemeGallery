@@ -1,17 +1,4 @@
-﻿@*<!DOCTYPE html>
-
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>@ViewBag.Title</title>
-    </head>
-    <body>
-        <div>
-            @RenderBody()
-        </div>
-    </body>
-    </html>*@
-@using Microsoft.AspNetCore.Components.Web
+﻿@using Microsoft.AspNetCore.Components.Web
 @namespace MemeGallery.Pages.MemeAdmin
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -37,7 +24,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">PandemicMeme.com</a>
+                <a class="navbar-brand" asp-area="" asp-page="/">PandemicMeme.com</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,13 +32,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-page="/MemeAdmin/MemeGalleryView">Meme Gallery</a>
+                            <a class="nav-link " asp-area="" asp-page="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://www.pandemicmeme.com/">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/MemeAdmin/index">Log-in</a>
+                            <a class="nav-link" asp-area="" asp-page="/MemeAdmin/index">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/MemeAdmin/MemeUpload">MemeUploader</a>
                         </li>
                     </ul>
                 </div>
@@ -89,27 +79,6 @@
 
 
 </body>
-@*<footer>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">PandemicMeme.com</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-area="" asp-page="/Categories/index">Categories</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </footer>*@
 
 <footer class="footer text-muted bg-dark">
     <div class="container">

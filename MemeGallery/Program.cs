@@ -18,7 +18,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContextI>(options =>
+<<<<<<< HEAD
     options.UseSqlite(connectionString));
+=======
+    options.UseSqlServer(connectionString));
+>>>>>>> 850c98eb3e5fca76490dbf112c9fd7bee97f1628
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")
     ));

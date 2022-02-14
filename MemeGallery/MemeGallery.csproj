@@ -16,7 +16,6 @@
     <None Remove="WindowsAzure.StorageExtensions" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Migrations\SqlDb\" />
-    <None Remove="Migrations\IdentityDb\" />
     <None Remove="Pages\MemeAdmin\" />
     <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
   </ItemGroup>
@@ -46,7 +45,6 @@
   <ItemGroup>
     <Folder Include="MODEL\" />
     <Folder Include="Migrations\SqlDb\" />
-    <Folder Include="Migrations\IdentityDb\" />
     <Folder Include="Pages\MemeAdmin\" />
   </ItemGroup>
 </Project>

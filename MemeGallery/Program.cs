@@ -29,6 +29,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+builder.Services.AddAuthorizationCore(options => {
+    options.AddPolicy("pageview-policy", policy => {
+        policy.RequireClaim("ViewIndexPage", "yes");
+    });
+});
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();

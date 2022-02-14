@@ -1,11 +1,11 @@
 ﻿@page "/MemeAdmin/Index"
 @model MemeGallery.Pages.MemeAdmin.IndexModel
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "pageview-policy")]
 
-@*<head>
-    <base href="~/" />
-    <link rel="stylesheet" href="~/css/bootswatch_cyborg.css" />
-    <link href="css/site.css" rel="stylesheet" />
-</head>*@
+
+
+
 <div class="container">
     <table class="table table-borderd table-striped" style="width:auto">
         <thead>

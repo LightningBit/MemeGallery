@@ -1,4 +1,6 @@
-﻿using System.IO;
+
+using System.IO;
+
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -17,12 +19,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContextI>(options =>
-<<<<<<< HEAD
-    options.UseSqlite(connectionString));
-=======
+
+builder.Services.AddDbContext<ApplicationDbContexti>(options =>
+    options.UseSqlServer(connectionString));builder.Services.AddDbContext<ApplicationDbContextI>(options =>
     options.UseSqlServer(connectionString));
->>>>>>> 850c98eb3e5fca76490dbf112c9fd7bee97f1628
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")
     ));
@@ -32,6 +33,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+builder.Services.AddAuthorizationCore(options => {
+    options.AddPolicy("pageview-policy", policy => {
+        policy.RequireClaim("ViewIndexPage", "yes");
+    });
+});
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();

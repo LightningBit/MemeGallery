@@ -6,6 +6,9 @@ using MemeGallery.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MemeGallery.Model;
+using Microsoft.AspNetCore.Authorization;
+
+
 
 namespace MemeGallery.Pages.MemeAdmin
 {
@@ -25,5 +28,6 @@ namespace MemeGallery.Pages.MemeAdmin
         {
             Categories = _db.Meme;
         }
+
     }
 }

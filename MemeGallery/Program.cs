@@ -1,6 +1,5 @@
 
 using System.IO;
-
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -19,11 +18,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
 builder.Services.AddDbContext<ApplicationDbContexti>(options =>
     options.UseSqlServer(connectionString));builder.Services.AddDbContext<ApplicationDbContextI>(options =>
     options.UseSqlServer(connectionString));
-
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")
     ));
@@ -71,4 +68,7 @@ app.MapRazorPages();
 
 
 app.Run();
+
+
+
 

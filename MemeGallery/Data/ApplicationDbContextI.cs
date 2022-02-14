@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MemeGallery.Data;
 
-public class IdentityDbContext : DbContext
+public class ApplicationDbContextI : IdentityDbContext
 {
-    public IdentityDbContext(DbContextOptions<IdentityDbContext> options)
+    public ApplicationDbContextI(DbContextOptions<ApplicationDbContextI> options)
         : base(options)
     {
     }

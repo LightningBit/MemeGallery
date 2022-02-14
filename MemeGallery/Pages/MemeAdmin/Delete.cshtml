@@ -1,0 +1,41 @@
+﻿@page "/Delete"
+@model MemeGallery.Pages.MemeAdmin.DeleteModel
+
+@*<head>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/css/bootswatch_cyborg.css" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>*@
+<form method="post">
+    <input hidden asp-for="Meme.Id" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class=" text-primary pl-3">Delete Meme</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Meme.Category"></label>
+            <input asp-for="Meme.Category" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Meme.BlobURL"></label>
+            <input asp-for="Meme.BlobURL" disabled class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px;">Delete</button>
+        <a asp-page="Index" class="btn btn-secondary" style="width:150px;">Back to list</a>
+        @*<a asp-page="../Index" class="btn btn-secondary" style="width:150px;">Back to list</a>
+            redirect back to home page*@
+
+
+
+
+    </div>
+</form>
+
+@*Custom validation on client side*@
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

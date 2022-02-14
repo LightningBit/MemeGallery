@@ -9,6 +9,7 @@ using MemeGallery.Model;
 using Microsoft.AspNetCore.Authorization;
 
 
+
 namespace MemeGallery.Pages.MemeAdmin
 {
     public class IndexModel : PageModel

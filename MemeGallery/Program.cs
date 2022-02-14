@@ -19,10 +19,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContexti>(options =>
-    options.UseSqlServer(connectionString));builder.Services.AddDbContext<ApplicationDbContextI>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseSqlServer(connectionString)); builder.Services.AddDbContext<ApplicationDbContextI>(options =>
+     options.UseSqlServer(connectionString));
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")
     ));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -68,7 +68,4 @@ app.MapRazorPages();
 
 
 app.Run();
-
-
-
 

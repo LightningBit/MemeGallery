@@ -23,14 +23,9 @@
         {
             foreach (var image in Model.Meme)
             {
-                <div class="col-md-3">
-                    <div class="card border-secondary bg-dark" style="width:stretch">
-                        <a href="@image.BlobURL" class="card">
-                            <img src="@image.BlobURL" alt="..." class="card">
-                        </a>
-                    </div>
-                    <div class="card-footer border-secondary bg-dark mb-4">
-
+                <div class="card col-md-3">
+                    <div class="card-body border-secondary bg-dark">
+                            <img src="@image.BlobURL" alt="..." class="card-img-top">
                         @if (image.Caption != null)
                         {
                             <div class="dropdown">
@@ -59,6 +54,7 @@
                         }
                     </div>
                 </div>
+                
             }
         }
         else

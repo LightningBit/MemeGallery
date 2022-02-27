@@ -3966,19 +3966,20 @@ fieldset:disabled .btn {
 
 .dropdown-menu {
     position: absolute;
+    width: 100%;
     z-index: 1000;
     display: none;
     min-width: 10rem;
-    padding: 0.5rem 0;
+    padding: 14px 28px;
     margin: 0;
     font-size: 1rem;
     color: #fff;
-    text-align: left;
     list-style: none;
-    background-color: #222;
+    background-color: rgb(3, 3, 3);
     background-clip: padding-box;
-    border: 1px solid #444;
+    border: 1px solid rgb(241, 237, 237);
     border-radius: 0.25rem;
+    text-align: center;
 }
 
     .dropdown-menu[data-bs-popper] {

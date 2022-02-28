@@ -20,8 +20,6 @@
                 </p>
 
                 <div asp-validation-summary="All"></div>
-
-
                 <div class="mb-3">
                     <label asp-for="Meme.Caption"></label>
                     <input asp-for="@Model.Meme.Caption" class="form-control" />
@@ -31,17 +29,25 @@
                 <div class="mb-3">
                     <label asp-for="Meme.Category"></label>
                     <select asp-for="@Model.Meme.Category" class="form-control">
-                        <option value="Humor..............">Humor</option>
-                        <option value="People">People</option>
-                        <option value="Places">Places</option>
+                        <option value="Pandemic">Pandemic</option>
+                        <option value="HeadLines">HeadLines</option>
+                        <option value="Crypto">Crypto</option>
+                        <option value="Love-n-Peace">Love-n-Peace</option>
                         <option value="Politics">Politics</option>
+                        <option value="Tweets">Tweets</option>
                     </select>
                     <span asp-validation-for="Meme.Category" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="Meme.Rank"></label>
-                    <input asp-for="@Model.Meme.Rank" class="form-control" />
+                    <label asp-for="Meme.Rank">1-5 Stars</label>
+                    <select asp-for="@Model.Meme.Rank" class="form-control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                     <span asp-validation-for="Meme.Rank" class="text-danger"></span>
                 </div>
                 <div class="button mb-3">

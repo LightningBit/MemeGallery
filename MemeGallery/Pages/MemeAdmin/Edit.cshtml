@@ -1,11 +1,7 @@
 ﻿@page "/Edit"
 @model MemeGallery.Pages.MemeAdmin.EditModel
 
-@*<head>
-    <base href="~/" />
-    <link rel="stylesheet" href="~/css/bootswatch_cyborg.css" />
-    <link href="css/site.css" rel="stylesheet" />
-</head>*@
+
 <form method="post">
     <input hidden asp-for="Meme.Id" />
     <div class="border p-3 mt-4">
@@ -13,17 +9,30 @@
             <h2 class=" text-primary pl-3">Edit Meme</h2>
             <hr />
         </div>
+
         <div asp-validation-summary="All"></div>
         <div class="mb-3">
             <label asp-for="Meme.Category"></label>
-            <input asp-for="@Model.Meme.Category" class="form-control" />
+            <select asp-for="@Model.Meme.Category" class="form-control">
+                <option value="Pandemic">Pandemic</option>
+                <option value="HeadLines">HeadLines</option>
+                <option value="Crypto">Crypto</option>
+                <option value="Love-n-Peace">Love-n-Peace</option>
+                <option value="Politics">Politics</option>
+                <option value="Tweets">Tweets</option>
+            </select>
             <span asp-validation-for="Meme.Category" class="text-danger"></span>
-        </div>
-        <div class="mb-3">
-            <label asp-for="Meme.Rank"></label>
-            <input asp-for="@Model.Meme.Rank" class="form-control" />
-            <span asp-validation-for="Meme.Rank" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="Meme.Rank">1-5 Stars</label>
+                <select asp-for="@Model.Meme.Rank" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span asp-validation-for="Meme.Rank" class="text-danger"></span>
+            </div>
 
         <div class="mb-3">
             <label asp-for="Meme.Caption"></label>

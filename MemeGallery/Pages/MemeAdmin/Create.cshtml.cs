@@ -32,10 +32,10 @@ namespace MemeGallery.Pages.MemeAdmin
         public async Task<IActionResult> OnPost()
         {
             //check for vaid input return null to page 
-            if(Meme.Category == Meme.Rank.ToString())
-            {
-                ModelState.AddModelError("Meme.Category", "The Rank can not match the Name.");
-            }
+            //if(Meme.Category == Meme.Rank.ToString())
+            //{
+            //    ModelState.AddModelError("Meme.Category", "The Rank can not match the Name.");
+            //}
 
 
             if(ModelState.IsValid)

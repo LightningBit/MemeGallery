@@ -1,7 +1,7 @@
 ﻿@page "/MemeUpload"
 @model MemeGallery.Pages.MemeAdmin.MemeUploadModel
 @using Microsoft.AspNetCore.Authorization
-@attribute [Authorize(Policy = "pageview-policy")]
+@attribute [Authorize(Roles = "Admin")]
 
 
 <div class="container">

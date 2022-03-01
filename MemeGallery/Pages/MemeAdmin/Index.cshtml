@@ -1,7 +1,7 @@
 ﻿@page "/MemeAdmin/Index"
 @model MemeGallery.Pages.MemeAdmin.IndexModel
 @using Microsoft.AspNetCore.Authorization
-@attribute [Authorize(Policy = "pageview-policy")]
+@attribute [Authorize(Roles = "Admin")]
 
 
 <div class="container">

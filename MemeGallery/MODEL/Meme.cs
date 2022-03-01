@@ -23,8 +23,13 @@ namespace MemeGallery.Model
         [Required]
         public bool Other { get; set; }
 
+
         public string? SupportingLinks { get; set; }
 
+        //[Required]
+        //[Display(Name = "Born on Date")]
+        //[DataType(DataType.Date)]
+        //public DateTime DOB { get; set; }
 
 
 
@@ -33,7 +38,8 @@ namespace MemeGallery.Model
 
 
 
-      
+
+
 
     }
 }

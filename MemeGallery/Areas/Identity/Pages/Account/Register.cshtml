@@ -1,7 +1,8 @@
 ﻿@page
 @model RegisterModel
 @using Microsoft.AspNetCore.Authorization
-@attribute [Authorize(Policy = "pageview-policy")]
+@attribute [Authorize(Roles = "Admin")]
+
 @{
     ViewData["Title"] = "Register";
 }

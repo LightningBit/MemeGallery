@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using MemeGallery.Areas.Identity;
 using MemeGallery.Data;
+using Syncfusion.Blazor;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +32,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContextI>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+//NewMethod(builder);
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddAuthorizationCore(options => {
     options.AddPolicy("pageview-policy", policy => {
@@ -39,7 +43,7 @@ builder.Services.AddAuthorizationCore(options => {
 builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();
-
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTkxMjA4QDMxMzkyZTM0MmUzMGhTc3FUd2hmb29qbUxTaGtQZEpYY3d0ZER6RG8wUzJCcjd6WlZDbjFHeTQ9");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -69,4 +73,3 @@ app.MapRazorPages();
 
 
 app.Run();
-

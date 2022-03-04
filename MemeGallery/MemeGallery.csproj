@@ -18,6 +18,10 @@
     <None Remove="Migrations\SqlDb\" />
     <None Remove="Pages\MemeAdmin\" />
     <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+    <None Remove="Syncfusion.Blazor" />
+    <None Remove="Syncfusion.Blazor.Data" />
+    <None Remove="Syncfusion.Blazor.Popups" />
+    <None Remove="Syncfusion.Blazor.Calendars" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig" />
@@ -40,6 +44,7 @@
     <PackageReference Include="WindowsAzure.StorageExtensions" Version="1.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.2" />
+    <PackageReference Include="Syncfusion.Blazor" Version="19.4.0.54" />
   </ItemGroup>
 
   <ItemGroup>

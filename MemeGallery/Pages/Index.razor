@@ -1,7 +1,33 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<header>
+    <style>
+        .e-card-image {
+            background: url('./sample.jpg');
+            height: 160px;
+          
+          
+        }
 
-<h1>This Page is Under Construction, please visit our blog or Meme GalleryView</h1>
+        @*.e-card {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            align-content: center;
+        }*@
+            .e-card .e-card-horizontal .e-card-stacked {
+                justify-content: flex-start;
+                margin: initial;
+            }
+    </style>
+</header>
 
-
+<body>
+<SfCard Orientation="CardOrientation.Horizontal" ID="Meme">
+    <CardStacked>
+        <CardHeader Title="" />
+        <CardContent Content="This Page is Under Construction, visit our blog or Meme GalleryView." />
+    </CardStacked>
+    <img src="/Images/ModernUnderConstruction.png">
+</SfCard>
+</body>
